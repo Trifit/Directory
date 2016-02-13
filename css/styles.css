@@ -1,0 +1,206 @@
+/**************** 
+*
+* General styles
+* ============
+*
+*****************/
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background: #eeeeee;
+	color: #e6e6e6;
+	width: 1040px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+#addView {	
+	height: 50px;
+	width: 50px;
+	top:25px;
+	right: 100px;
+	position: fixed;
+	text-align: center;
+	
+	border-radius: 100%;
+	background-color: #fff;
+
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	-ms-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+}
+#addView a{
+
+	font-size: 2.5em;
+	line-height: 50px;
+	font-family: Arial;
+
+	color:#acacac;
+	text-decoration: none;
+	z-index: 99;
+}
+
+#addView:hover {
+	cursor: pointer;
+	color: #959595;
+
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px 0;
+	-ms-box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px 0;
+	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px 0;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 0 6px 0;
+}
+
+
+
+.view {
+	vertical-align: top;
+	display: inline-block;
+
+	background: rgba(55, 174, 204, 0.9);
+	
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	-ms-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;	
+    
+    padding: 0 30px;	
+}
+
+
+/******************************
+* Direcory View styling
+* =====================
+* 
+* Styling of the list of items
+*
+******************************/
+
+#directoryView {	
+	width: 17%;
+    margin: 50px 3% 0 0;    
+}
+
+#directoryView li{
+	list-style: none;
+	padding: 5px 0;
+	display: block;
+
+	font-weight: 300;
+	letter-spacing: 1px;
+
+}
+
+#directoryView li:not(:last-child){
+	border-bottom: 1px solid #e6e6e6;
+}
+
+#directoryView li h4{
+	margin-bottom: 0;
+}
+
+#directoryView li h5{
+	margin-top: 0;
+	font-weight: 300;
+}
+
+#directoryView li:hover{
+	cursor: pointer;
+	color: white;
+	transition: all .1s ease-in-out;	
+}
+
+#directoryView li h4:hover:before {
+    position: absolute; /* Prevent underline of arrow */
+    margin-left:-20px; /* Add a little space between text and arrow */
+    content: "\203A";/* Unicode hex for &raquo; */
+    font-size: 1.5em;
+    
+}
+
+
+
+
+.addItem{
+	right:748px;
+	position: relative;
+	width: 728px;
+}
+
+/**************** 
+*
+* Item styling
+* ============
+*
+****************/
+
+#itemView {
+	width: 68%;	
+	margin-top: 50px;
+}
+
+#item-template{
+	position: absolute;
+}
+
+/**************** 
+*
+* Forms styles
+* ============
+*
+*****************/
+
+.group > *{
+	display: inline-block;
+}
+
+.group input, .group select, .group textarea{
+	float:right;
+	margin-right: 10%;
+	width: 300px;
+	font-family: inherit;
+	font-size: 1.1em;
+}
+
+.group p{
+	margin:10px 0;
+} 
+
+input:placeholder-shown{
+	padding-left: 10px;
+}
+
+h3 input{
+	width: 90%;
+}
+
+/*****************
+*
+* State styling
+* =============
+*
+*****************/
+
+.is-hidden{
+	display: none;
+}
+
+.not-editing-input{
+	background: transparent;
+	border: none;
+}
+
+.is-editing-input{
+	background-color: white;
+	color: black;
+}

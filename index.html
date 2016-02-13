@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Backbone.js Boilerplate </title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css"/>
+  </head>
+  <body>
+    
+  <div id="addView"><a href="#">+</a></div>
+  
+  <ul id="directoryView"></ul>
+  
+  <div id="itemView"></div>
+  
+  
+  <!-- Templates -->
+  <script type="text/template" id="item-list-template">
+    <li data-id="<%= id %>" class="item">
+      <h4><%= Business %></h4>
+      <h5><%= Field %></h5>
+    </li>
+  </script>
+  
+  <!-- <script type="text/template" id="item-template">
+  <h3><input type="text" value="<%= title %>" /></h3>
+  
+  <div class="group">
+    <p>When the resume was send?</p>
+    <input type="date" name="dateSend" value="<%= dateSend %>"/>
+  </div>
+  <div class="group">
+    <p>Where is located?</p>
+    <input type="url" placeholder="Map Address" value="<%= map %>"/>
+    <p><a href='<%= map %>'>Map</a> </p>
+  </div>
+  
+  <div class="group">
+    <p>Selection round:</p>
+    <select name="state" placeholder="Selection state">
+      <option value="0"><%= round %></option>
+      <option value="1"><%= round %></option>
+      <option value="2"><%= round %></option>
+      <option value="4"><%= round %></option>
+      <option value="5"><%= round %></option>
+    </select>
+  </div>
+  <div class="group">
+    <p>Follow up:</p>
+    <input type="date" name="dateFollow" value="<%= dateFollow %>"/>
+    
+  </div>
+  <div class="group">
+    <p>Comments:</p>
+    <textarea name="comments"><%= comments %></textarea>
+  </div>
+  <div class="accept"><button type="submit">Add company</button></div>
+  </script> -->
+  
+  <script type="text/template" id="item-template">
+    <h3><a href="<%= Link %>" target="_blank"><%= Business %></a></h3>
+    <h4><%= Field %></h4>
+    
+    <div class="group">
+      <p>Contact Info:</p>
+      <input type="text" name="contact" value="<%= Contact %>" class="not-editing-input" disabled/> 
+      <button class="edit">-</button>
+    </div>   
+    
+    
+    <div class="group">
+      <p>Where?</p>
+      <input type="text" name="where" value="<%= Where %>" class="not-editing-input" disabled/>      
+      <button class="edit">-</button>
+    </div>
+    
+    <div class="group">
+      <p>Selection round:</p>
+      <p><%= Round %></p>
+    </div>    
+    
+    <div class="group">
+      <p>Contact Date:</p>
+      <p><%= CDate %></p>      
+    </div>
+
+    <div class="group">
+      <p>Follow up Date:</p>
+      <p><%= FollowUp %></p>
+    </div>
+
+    <div class="group">
+      <p>Comments:</p>
+      <p><%= Comments %></p>
+    </div>
+  </script>
+  <script type="text/template" id="add-item-template">
+  <div class="addItem view is-hidden">
+    <h3><input type="text" value="title" /></h3>
+    
+    <div class="group">
+      <p>When the resume was send?</p>
+      <input type="date" name="dateSend" value="dateSend"/>
+    </div>
+    <div class="group">
+      <p>Where is located?</p>
+      <input type="url" placeholder="Map Address" value="map"/>
+      
+    </div>
+    
+    <div class="group">
+      <p>Selection round:</p>
+      <select name="state" placeholder="Selection state">
+        <option value="0">not sended</option>
+        <option value="1">no response</option>
+        <option value="2">round 1</option>
+        <option value="4">round 2</option>
+        <option value="5">round 3</option>
+        <option value="6">round 4</option>
+      </select>
+    </div>
+    <div class="group">
+      <p>Follow up:</p>
+      <input type="date" name="dateFollow" value="dateFollow"/>
+      
+    </div>
+    <div class="group">
+      <p>Comments:</p>
+      <textarea name="comments">comments</textarea>
+    </div>
+    <div class="accept"><button type="submit">Add company</button></div>
+  </div>
+  </script>
+  <script src="js/vendor/json2.js"></script>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/underscore.js"></script>
+  <script src="js/backbone-min.js"></script>
+  <script src="js/backbone.localStorage.js"></script>
+  <script src="js/directory-0.1.js"></script>
+</body>
+</html>
